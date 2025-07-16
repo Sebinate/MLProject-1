@@ -5,16 +5,19 @@ from typing import List
 HYPHEN_E_DOT = '-e .'
 def get_requirements(file_path: str) -> List[str]:
     """
-    This function creates a list of the need requirements
+    This function creates a list of the needed requirements
     """    
+    requirements_list = []
+    
     with open(file_path, 'r') as file:
         requirements = file.readlines()
-        requirements = [req.replace("\n", '') for req in requirements]
+        
+        for req in requirements:
+            req = req.strip()
+            if req != HYPHEN_E_DOT:
+                requirements_list.append(req)
     
-    if HYPHEN_E_DOT in requirements:
-        requirements.remove(HYPHEN_E_DOT)
-    
-    return requirements    
+    return requirements_list   
     
 setup(
     name = 'MLProj-1',
