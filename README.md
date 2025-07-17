@@ -1,5 +1,5 @@
 # Math Score Prediction API
-A Flask application for predicting mathematics scores among students. This can help aid in identifying students in need of supplementary materials and or addional guidance.
+A Flask application for predicting mathematics scores among students. This can help aid in identifying students in need of supplementary materials and or additional guidance.
 
 ## Key Features
 - Predicts Math Scores on exam 
