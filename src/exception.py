@@ -21,5 +21,5 @@ if __name__ == "__main__":
         a = 1/0
     
     except Exception as e:
-        logger.logging.warning("Warning has been made")
+        logging.warning("Warning has been made")
         raise Custom_Exp(e, sys)
