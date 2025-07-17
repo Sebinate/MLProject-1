@@ -24,6 +24,18 @@ def adjusted_r2(X, y_actual, y_predicted):
     return adj_score
 
 def evaluate_model(X_train, y_train, X_test, y_test, models: dict) -> dict:
+    """
+    This can be expanded with RandomSearchCV (for hardware limiations and resource
+    saving), params (parameter) may be added and will be inputted in the model_training
+    module
+
+    gs = GridSearchCV(grid_params = params, cv = 3, n_jobs = -1)
+    gs.fit(X_train, y_train)
+
+    model.set_params(**gs.best_params_)
+    model.fit(X_train, y_train)
+    etc.
+    """
     try:
         report = {}
         logging.info("Looping over all models and evaluating r2")
@@ -49,3 +61,13 @@ def evaluate_model(X_train, y_train, X_test, y_test, models: dict) -> dict:
 
     except Exception as e:
         logging.error("Fata error has occured in model evaluation")
+
+def load_object(path):
+    try:
+        with open(path, 'rb') as file:
+            return pickle.load(file)
+        
+    except Exception as e:
+        logging.error(f"Fata error has occured in model loading for {path}")
+        raise Custom_Exp(e, sys)
+        

@@ -54,6 +54,10 @@ class ModelTrain:
                 "AdaBoost Regressor": AdaBoostRegressor()
             }
             logging.info("Initializing Evaluation Report")
+            """
+            This can be imporved by list here the params, adding the params to the evaluate
+            model function
+            """
             model_report = evaluate_model(X_train, y_train, X_test, y_test, models)
 
             logging.info("Selecting the best model")

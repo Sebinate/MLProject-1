@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Machine Learning Project 1</title>
+    </head>
+
+    <body>
+        <h1>Math Score Prediction</h1>
+        <form action="/predict" method="POST" style="text-align: center;">
+            <div >
+                <input type="radio" value="male" name="gender" id="male">
+                <label for="male">Male</label>
+                <br>
+                <input type="radio" value="female" name="gender" id="female">
+                <label for="female">Female</label>
+            </div>
+            <div>
+                <label for="race">Select Race/Ethnicity Group</label>
+                <br>
+                <select name="race">
+                    <option value="group A">Group A</option>
+                    <option value="group B">Group B</option>
+                    <option value="group C">Group C</option>
+                    <option value="group D">Group D</option>
+                    <option value="group E">Group E</option>
+                </select>
+            </div>
+            <div>
+                <label for="parental_level_of_education">Select Parents Level of Education</label>
+                <br>
+                <select name="parental_level_of_education">
+                    <option value="bachelor's degree">Bachelor's Degree</option>
+                    <option value="some college">Some College</option>
+                    <option value="master's degree">Master's Degree</option>
+                    <option value="associate's degree">Associate's Degre</option>
+                    <option value="high school">High School</option>
+                    <option value="some high school">Some High School</option>
+                </select>
+            </div>
+            <div>
+                <label for="lunch">Type of Lunch</label>
+                <br>
+                <select name="lunch">
+                    <option value="standard">Standard</option>
+                    <option value="free/reduced">Free/Reduced</option>
+                </select>
+            </div>
+            <div>
+                <label for="test_preparation_score">Test Preparation Score</label>
+                <br>
+                <select name="test_preparation_score">
+                    <option value="completed">Completed</option>
+                    <option value="none">None</option>
+                </select>
+            </div>
+            <div>
+                <label for="reading_score">Reading Score</label>
+                <input type="number" min="0" max="100" name="reading_score">
+            </div>
+            <div>
+                <label for="writing_score">Reading Score</label>
+                <input type="number" min="0" max="100" name="writing_score">
+            </div>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
