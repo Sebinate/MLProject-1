@@ -7,5 +7,4 @@ ipykernel
 xgboost
 catboost
 flask
-gunicorn
 -e .
